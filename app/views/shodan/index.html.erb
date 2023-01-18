@@ -1,0 +1,8 @@
+<h1>Shodan</h1>
+ <%= form_with url: search_path, method: 'get', local: true do |form| %>
+    <div class="form-group">
+        <%= form.label 'Search for IP '%>
+        <%= form.text_field :IP ,placeholder: 'Eg. 8.8.8.8' %>
+    </div>
+    <%=  form.submit "Search", class: 'btn btn-success btn-block' %>
+<% end %>

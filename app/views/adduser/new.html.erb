@@ -1,0 +1,15 @@
+<h1>Add user</h1>
+<%= form_with model: @user, url: adduser_path do |form| %>
+
+    <div class="mb-3">
+        <%= form.label :username %>
+        <%= form.text_field :username, class: "form-control" , placeholder: "username" %>
+    </div>
+    <div class="mb-3">
+        <%= form.label :password %>
+        <%= form.password_field :password, class: "form-control", placeholder: "password" %>
+    </div>
+    <div class="mb-3">
+        <%= form.submit "Add User" %>
+    </div>
+<% end %>   
