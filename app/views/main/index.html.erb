@@ -1,7 +1,6 @@
 <% if @user.username == "admin" %>
-  <div class="d-flex align-items justify-content">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
         <a class="navbar-brand" href="#">Navbar</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -17,12 +16,14 @@
           </ul>
         </div>
       </div>
-    </nav>
-  </div>
+  </nav>
 <% end %>
 
 <% if @user %>
-    Logged in as: <%= @user.username %> 
-     <%= button_to "Logout", logout_path, method: :delete %>
+<div class="note note-light mb-3">
+  <strong>Logged in as: </strong> <%= @user.username %>
+</div>
+     
+     <%= button_to "Logout", logout_path, method: :delete ,class: "btn btn-primary"%>
 <% end %>
 
